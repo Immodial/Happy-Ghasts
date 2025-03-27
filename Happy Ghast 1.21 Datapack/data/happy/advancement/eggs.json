@@ -1,0 +1,23 @@
+{
+    "criteria": {
+        "in_creative": {
+            "trigger": "tick",
+            "conditions": {
+                "player": {
+                    "type_specific": {
+                        "type": "player",
+                        "gamemode": ["creative"]
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [["in_creative"]],
+    "rewards": {
+        "recipes": [
+            "happy:dried_ghast_spawn_egg",
+            "happy:ghastling_spawn_egg",
+            "happy:happy_ghast_spawn_egg"
+        ]
+    }
+}

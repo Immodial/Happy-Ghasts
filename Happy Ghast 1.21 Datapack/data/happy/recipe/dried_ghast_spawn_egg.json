@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "###",
+        "#G#",
+        "###"
+    ],
+    "key": {
+        "G": "minecraft:ghast_spawn_egg",
+        "#": "minecraft:soul_sand"
+    },
+    "result": {
+        "id": "minecraft:ghast_spawn_egg",
+        "components": {
+            "item_name": "Dried Ghast Spawn Egg",
+            "item_model": "happy:dried_ghast_spawn_egg",
+            "entity_data": {
+                "id": "minecraft:marker",
+                "Tags": ["HGSpawnEgg","HGDriedGhastSpawn"]
+            }
+        }
+    }
+}
