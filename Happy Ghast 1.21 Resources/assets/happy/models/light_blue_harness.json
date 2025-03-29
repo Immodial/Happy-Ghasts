@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "happy:item/happy_ghast_blue_harness",
-		"particle": "happy:item/happy_ghast_blue_harness"
+		"2": "happy:item/happy_ghast_light_blue_harness",
+		"particle": "happy:item/happy_ghast_light_blue_harness"
 	},
 	"elements": [
 		{

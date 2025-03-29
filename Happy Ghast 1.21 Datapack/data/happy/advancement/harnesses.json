@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "none": {"trigger": "impossible"}
+    },
+    "requirements": [["none"]],
+    "rewards": {
+        "recipes": [
+            "happy:red_harness",
+            "happy:orange_harness",
+            "happy:yellow_harness",
+            "happy:lime_harness",
+            "happy:green_harness",
+            "happy:cyan_harness",
+            "happy:light_blue_harness",
+            "happy:blue_harness",
+            "happy:purple_harness",
+            "happy:magenta_harness",
+            "happy:pink_harness",
+            "happy:white_harness",
+            "happy:light_gray_harness",
+            "happy:gray_harness",
+            "happy:black_harness",
+            "happy:brown_harness"
+        ]
+    }
+}

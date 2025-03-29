@@ -50,6 +50,7 @@ function happy:ghast/parts/ghasticlerightback
 # Apply harness
 recipe give @a[distance=..20] happy:blue_harness
 execute on passengers if entity @s[tag=HGHappyGhastEquip] if data entity @s interaction run function happy:ghast/equip
+execute on passengers if entity @s[tag=HGHappyGhastEquip] run data remove entity @s interaction
 # Control when being ridden
 execute store result score @s HGUUIDFirst run data get entity @s UUID[0]
 execute store result score @s HGUUIDSecond run data get entity @s UUID[1]

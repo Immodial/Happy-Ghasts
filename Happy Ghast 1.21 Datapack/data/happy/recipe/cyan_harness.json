@@ -9,14 +9,14 @@
     "key": {
         "L": "minecraft:leather",
         "G": "minecraft:glass",
-        "W": "minecraft:blue_wool"
+        "W": "minecraft:cyan_wool"
     },
     "result": {
         "id": "minecraft:poisonous_potato",
         "components": {
-            "item_name": "Blue Harness",
-            "item_model": "happy:blue_harness_item",
-            "custom_data": {"HGGhastHarness":"blue"},
+            "item_name": "Cyan Harness",
+            "item_model": "happy:cyan_harness_item",
+            "custom_data": {"HGGhastHarness":"cyan"},
             "!consumable": {},
             "!max_stack_size": {}
         }
