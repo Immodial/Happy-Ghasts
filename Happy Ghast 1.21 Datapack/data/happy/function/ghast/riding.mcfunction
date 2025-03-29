@@ -14,6 +14,7 @@ execute if score @s HGLastRotation matches 361.. run scoreboard players remove @
 execute store result storage happyghast ForceRotation float 1 run scoreboard players get @s HGLastRotation
 function happy:ghast/forcerotate with storage happyghast
 execute rotated as @s on passengers run rotate @s[tag=HGHappyGhastDisplay] ~ 0
+execute rotated as @s run function happy:ghast/reseat
 # Steer vertically
 execute as @p[tag=HGRider] if predicate happy:up store result score _CurrentRise HGGlobals run data get entity @n[tag=HGRidden] Motion[1] 100
 execute as @p[tag=HGRider] if predicate happy:up run scoreboard players add _CurrentRise HGGlobals 4

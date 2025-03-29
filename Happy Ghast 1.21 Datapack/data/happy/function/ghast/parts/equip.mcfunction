@@ -3,7 +3,7 @@
 ## >> As: Any happy ghast parrot base
 ## >> Does: Possibly replace happy ghast body
 ## >> Input: None
-execute on passengers if entity @s[tag=HGHappyGhastSeat] run return fail
-summon interaction ~ ~ ~ {Tags:["HGHappyGhastSeat","HGHappyGhastFormatting"],width:2f,height:0.2f,response:true}
+execute on passengers if entity @s[tag=HGHappyGhastEquip] run return fail
+summon interaction ~ ~ ~ {Tags:["HGHappyGhastEquip","HGHappyGhastFormatting"],width:2f,height:3f}
 ride @n[tag=HGHappyGhastFormatting] mount @s
 tag @e remove HGHappyGhastFormatting

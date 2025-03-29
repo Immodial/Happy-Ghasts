@@ -1,6 +1,6 @@
 ## >> From: happy:tick
-## >> At: Any ghastling parrot base
-## >> As: Any ghastling parrot base
+## >> At: Any happy ghast parrot base
+## >> As: Any happy ghast parrot base
 ## >> Does: Update
 ## >> Input: None
 # Get off ground
@@ -32,7 +32,12 @@ data modify entity @s Sitting set value false
 # Add displays back
 function happy:ghast/parts/body
 function happy:ghast/parts/hitbox
-execute on passengers if entity @s[tag=HGHappyGhastHitbox] run function happy:ghast/parts/seat
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/harness
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatfront
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatleft
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatright
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatback
+execute if entity @s[tag=!HGHarnessed] run function happy:ghast/parts/equip
 function happy:ghast/parts/ghasticleleftfront
 function happy:ghast/parts/ghasticlecenterfront
 function happy:ghast/parts/ghasticlerightfront
@@ -42,9 +47,21 @@ function happy:ghast/parts/ghasticlerightmid
 function happy:ghast/parts/ghasticleleftback
 function happy:ghast/parts/ghasticlecenterback
 function happy:ghast/parts/ghasticlerightback
+# Apply harness
+recipe give @a[distance=..20] happy:blue_harness
+execute on passengers if entity @s[tag=HGHappyGhastEquip] if data entity @s interaction run function happy:ghast/equip
 # Control when being ridden
-execute on passengers if entity @s[tag=HGHappyGhastHitbox] on passengers run tag @s add HGRider
+execute store result score @s HGUUIDFirst run data get entity @s UUID[0]
+execute store result score @s HGUUIDSecond run data get entity @s UUID[1]
+execute store result score @s HGUUIDThird run data get entity @s UUID[2]
+execute store result score @s HGUUIDFourth run data get entity @s UUID[3]
+execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatFront] if function happy:ghast/hasthisattachment run tag @s add HGDriverSeat
+execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatLeft] if function happy:ghast/hasthisattachment run tag @s add HGLeftPassengerSeat
+execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatRight] if function happy:ghast/hasthisattachment run tag @s add HGRightPassengerSeat
+execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatBack] if function happy:ghast/hasthisattachment run tag @s add HGBackPassengerSeat
+execute as @n[tag=HGDriverSeat] on passengers run tag @s[type=player] add HGRider
 execute if entity @a[tag=HGRider] run return run function happy:ghast/riding
+execute rotated ~ 0 run function happy:ghast/reseat
 execute store result score @s HGLastRotation run data get entity @s Rotation[0] 1
 # Freeze when being stood on
 execute positioned ~-2.5 ~4 ~-2.5 unless entity @a[tag=!HGRider,dx=4,dy=2,dz=4] run data modify entity @s NoAI set value false

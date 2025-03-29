@@ -24,5 +24,6 @@ execute as @e[type=item_display,tag=HGGhastlingDisplay] unless function happy:gh
 execute as @e[type=parrot,tag=HGHappyGhast] at @s run function happy:ghast/loop
 execute as @e[type=item_display,tag=HGHappyGhastDisplay] unless function happy:ghast/exists run kill @s
 execute as @e[type=shulker,tag=HGHappyGhastHitbox] unless function happy:ghast/exists run kill @s
-execute as @e[type=interaction,tag=HGHappyGhastSeat] run function happy:ghast/mount
 execute as @e[type=item_display,tag=HGGhasticle] run function happy:ghast/ghasticle
+execute as @e[type=item_display,tag=HGHappyGhastSeat] run function happy:ghast/seat
+execute as @e[type=interaction,tag=HGSeatInteraction] unless function happy:ghast/seatexists run kill @s

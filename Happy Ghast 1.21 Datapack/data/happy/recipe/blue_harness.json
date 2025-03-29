@@ -1,0 +1,22 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:blue_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "Blue Harness",
+            "item_model": "happy:blue_harness_item",
+            "custom_data": {"HGGhastHarness":"blue"},
+            "!consumable": {}
+        }
+    }
+}
