@@ -50,4 +50,4 @@ function happy:ghastling/parts/ghasticlecenterback
 function happy:ghastling/parts/ghasticlerightback
 # Grow up
 scoreboard players remove @s HGGrowthTime 1
-execute if score @s HGGrowthTime matches ..0 run function happy:ghast/evolve
+execute if score @s HGGrowthTime matches ..0 run function happy:ghastling/evolve

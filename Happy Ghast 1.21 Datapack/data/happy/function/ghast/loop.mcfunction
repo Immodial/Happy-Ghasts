@@ -33,6 +33,7 @@ data modify entity @s Sitting set value false
 function happy:ghast/parts/body
 function happy:ghast/parts/hitbox
 execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/harness
+execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/goggles
 execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatfront
 execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatleft
 execute if entity @s[tag=HGHarnessed] run function happy:ghast/parts/seatright
@@ -64,6 +65,7 @@ execute as @n[tag=HGDriverSeat] on passengers run tag @s[type=player] add HGRide
 execute if entity @a[tag=HGRider] run return run function happy:ghast/riding
 execute rotated ~ 0 run function happy:ghast/reseat
 execute store result score @s HGLastRotation run data get entity @s Rotation[0] 1
+execute on passengers run data modify entity @s[tag=HGHappyGhastGoggles] transformation.left_rotation set value [-0.4d,0d,0d,0.915]
 # Freeze when being stood on
 execute positioned ~-2.5 ~4 ~-2.5 unless entity @a[tag=!HGRider,dx=4,dy=2,dz=4] run data modify entity @s NoAI set value false
 execute positioned ~-2.5 ~4 ~-2.5 if entity @a[tag=!HGRider,dx=4,dy=2,dz=4] run data modify entity @s NoAI set value true

@@ -1,6 +1,6 @@
 ## >> From: happy:tick
 ## >> At: None
-## >> As: Any ghastling display
+## >> As: Any happy ghast display
 ## >> Does: Check for ghast
 ## >> Input: None
 execute on vehicle if entity @s[tag=HGHappyGhast] run return 1

@@ -6,6 +6,7 @@
 tag @s add HGRidden
 data modify entity @s NoAI set value false
 execute on passengers run data modify entity @s[tag=HGHappyGhastHitbox] Health set from entity @n[tag=HGRidden] Health
+execute on passengers run data modify entity @s[tag=HGHappyGhastGoggles] transformation.left_rotation set value [0d,0d,0d,1d]
 # Steer rotation
 execute as @p[tag=HGRider] if predicate happy:left run scoreboard players remove @n[tag=HGRidden] HGLastRotation 2
 execute as @p[tag=HGRider] if predicate happy:right run scoreboard players add @n[tag=HGRidden] HGLastRotation 2

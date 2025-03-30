@@ -8,7 +8,7 @@ schedule function happy:tick 1
 # Spawn eggs
 execute as @e[type=marker,tag=HGDriedGhastSpawn] at @s run function happy:dried/spawn
 execute as @e[type=marker,tag=HGGhastlingSpawn] at @s run function happy:ghastling/spawn
-execute as @e[type=marker,tag=HGHappyGhastSpawn] at @s unless function happy:ghastling/spawn as @n[tag=HGGhastling] run function happy:ghast/evolve
+execute as @e[type=marker,tag=HGHappyGhastSpawn] at @s unless function happy:ghastling/spawn as @n[tag=HGGhastling] run function happy:ghastling/evolve
 kill @e[type=marker,tag=HGSpawnEgg]
 # Spawn dried ghasts
 execute as @e[type=skeleton,tag=!HGDrySpawnChecked] at @s unless entity @e[type=cow,tag=HGDriedGhast,distance=..110] if biome ~ ~ ~ soul_sand_valley run function happy:dried/spawn
