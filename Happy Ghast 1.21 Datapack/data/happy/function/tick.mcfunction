@@ -19,11 +19,10 @@ execute as @e[type=item_display,tag=HGDriedGhastDisplay] unless function happy:d
 execute as @e[type=item_display,tag=HGFloorGhasticle] run function happy:dried/ghasticle
 # Ghastlings
 execute as @e[type=parrot,tag=HGGhastling] at @s run function happy:ghastling/loop
-execute as @e[type=item_display,tag=HGGhastlingDisplay] unless function happy:ghastling/exists run kill @s
+execute as @e[type=!player,tag=HGGhastlingDisplay] unless function happy:ghastling/exists run kill @s
 # Happy ghasts
-execute as @e[type=parrot,tag=HGHappyGhast] at @s run function happy:ghast/loop
-execute as @e[type=item_display,tag=HGHappyGhastDisplay] unless function happy:ghast/exists run kill @s
-execute as @e[type=shulker,tag=HGHappyGhastHitbox] unless function happy:ghast/exists run kill @s
+execute as @e[type=parrot,tag=HGHappyGhast] at @s if loaded ~ ~ ~ run function happy:ghast/loop
+execute as @e[type=!player,tag=HGHappyGhastDisplay] unless function happy:ghast/exists run kill @s
 execute as @e[type=item_display,tag=HGGhasticle] run function happy:ghast/ghasticle
 execute as @e[type=item_display,tag=HGHappyGhastSeat] run function happy:ghast/seat
 execute as @e[type=interaction,tag=HGSeatInteraction] unless function happy:ghast/seatexists run kill @s

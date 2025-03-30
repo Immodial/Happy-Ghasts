@@ -3,6 +3,7 @@
 ## >> As: Happy Ghast Seat Interaction being mounted
 ## >> Does: Mount player onto it
 ## >> Input: None
+execute unless loaded ~ ~ ~ run kill @s
 execute at @s run function happy:ghast/parts/seatinteraction
 execute store result score @s HGUUIDFirst run data get entity @s data.HappyGhastAttached[0]
 execute store result score @s HGUUIDSecond run data get entity @s data.HappyGhastAttached[1]

@@ -3,7 +3,7 @@
 ## >> As: Any ghastling parrot base
 ## >> Does: Change from Ghastling to Happy Ghast
 ## >> Input: None
-tag @s remove HGHappyGhast
+tag @s remove HGGhastling
 tag @s add HGHappyGhast
 attribute @s flying_speed base set 2
 attribute @s max_health base set 26
