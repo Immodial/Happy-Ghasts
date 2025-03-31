@@ -29,6 +29,9 @@ execute unless block ~ ~ ~ water run return run attribute @s gravity modifier re
 scoreboard players add @s HGGrowthTime 1
 attribute @s gravity modifier add happy:hydrating 1 add_value
 execute if predicate {condition:"random_chance",chance:0.05} run particle happy_villager ~ ~0.6 ~ 0.3 0.1 0.3 0 1
+execute unless score @s HGGrowthTime matches 6000.. run return fail
+execute on passengers run data modify entity @s[tag=HGDriedGhastBody] item.components."minecraft:item_model" set value "happy:rehydrating_ghast"
+execute on passengers run data modify entity @s[tag=HGFloorGhasticle] item.components."minecraft:item_model" set value "happy:rehydrating_ghasticle"
 execute unless score @s HGGrowthTime matches 12000.. run return fail
 function happy:ghastling/spawn
 tp @s ~ -1000 ~

@@ -49,7 +49,7 @@ function happy:ghast/parts/ghasticleleftback
 function happy:ghast/parts/ghasticlecenterback
 function happy:ghast/parts/ghasticlerightback
 # Apply harness
-recipe give @a[distance=..20] happy:blue_harness
+advancement grant @a[distance=..20] only happy:harnesses
 execute on passengers if entity @s[tag=HGHappyGhastEquip] if data entity @s interaction run function happy:ghast/equip
 execute on passengers if entity @s[tag=HGHappyGhastEquip] run data remove entity @s interaction
 # Control when being ridden

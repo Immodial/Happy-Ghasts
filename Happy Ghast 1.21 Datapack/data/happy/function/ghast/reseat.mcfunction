@@ -3,11 +3,11 @@
 ## >> As: Happy Ghast Seat
 ## >> Does: Set seat positions
 ## >> Input: None
-execute as @n[tag=HGDriverSeat] run tp @s ^ ^6.1 ^1.5
+tp @e[tag=HGDriverSeat] ^ ^6.1 ^1.5
 tag @e remove HGDriverSeat
-execute as @n[tag=HGLeftPassengerSeat] run tp @s ^-1.5 ^6.1 ^
+tp @e[tag=HGLeftPassengerSeat] ^-1.5 ^6.1 ^
 tag @e remove HGLeftPassengerSeat
-execute as @n[tag=HGRightPassengerSeat] run tp @s ^1.5 ^6.1 ^
+tp @e[tag=HGRightPassengerSeat] ^1.5 ^6.1 ^
 tag @e remove HGRightPassengerSeat
-execute as @n[tag=HGBackPassengerSeat] run tp @s ^ ^6.1 ^-1.5
+tp @e[tag=HGBackPassengerSeat] ^ ^6.1 ^-1.5
 tag @e remove HGBackPassengerSeat
