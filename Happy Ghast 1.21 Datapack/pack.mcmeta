@@ -1,6 +1,18 @@
 {
   "pack": {
     "pack_format": 71,
-    "description": "Because modders can add things faster!"
+    "description": "Because modders can add things faster!",
+    "supported_formats": [61,71]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "earlier",
+        "formats": {
+          "max_inclusive": 61,
+          "min_inclusive": 0
+        }
+      }
+    ]
   }
 }

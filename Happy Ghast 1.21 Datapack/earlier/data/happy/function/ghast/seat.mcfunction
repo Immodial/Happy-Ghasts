@@ -1,0 +1,15 @@
+## >> From: happy:tick
+## >> At: None
+## >> As: Happy Ghast Seat Interaction being mounted
+## >> Does: Mount player onto it
+## >> Input: None
+execute unless loaded ~ ~ ~ run kill @s
+execute at @s run function happy:ghast/parts/seatinteraction
+execute store result score @s HGUUIDFirst on passengers if entity @s[type=marker] run data get entity @s data.HappyGhastAttached[0]
+execute store result score @s HGUUIDSecond on passengers if entity @s[type=marker] run data get entity @s data.HappyGhastAttached[1]
+execute store result score @s HGUUIDThird on passengers if entity @s[type=marker] run data get entity @s data.HappyGhastAttached[2]
+execute store result score @s HGUUIDFourth on passengers if entity @s[type=marker] run data get entity @s data.HappyGhastAttached[3]
+execute unless function happy:ghast/hasattachment run return run kill @s
+execute on passengers unless entity @s[type=player] on vehicle on passengers if entity @s[tag=HGSeatInteraction] on target run ride @s mount @n[tag=HGAttachmentChecking]
+tag @s remove HGAttachmentChecking
+execute on passengers run data remove entity @s[tag=HGSeatInteraction] interaction

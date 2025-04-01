@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "group": "harness",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:black_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "'Black Harness'",
+            "item_model": "happy:black_harness_item",
+            "custom_data": {"HGGhastHarness":"black"},
+            "!consumable": {},
+            "!max_stack_size": {}
+        }
+    }
+}

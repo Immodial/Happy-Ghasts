@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "group": "harness",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:magenta_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "'Magenta Harness'",
+            "item_model": "happy:magenta_harness_item",
+            "custom_data": {"HGGhastHarness":"magenta"},
+            "!consumable": {},
+            "!max_stack_size": {}
+        }
+    }
+}

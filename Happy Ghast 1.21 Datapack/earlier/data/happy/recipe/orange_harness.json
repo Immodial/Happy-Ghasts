@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "group": "harness",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:orange_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "'Orange Harness'",
+            "item_model": "happy:orange_harness_item",
+            "custom_data": {"HGGhastHarness":"orange"},
+            "!consumable": {},
+            "!max_stack_size": {}
+        }
+    }
+}

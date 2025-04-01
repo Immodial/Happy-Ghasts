@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shapeless",
+    "category": "misc",
+    "ingredients": ["minecraft:water_bucket", "minecraft:ghast_spawn_egg", "minecraft:soul_sand"],
+    "result": {
+        "id": "minecraft:ghast_spawn_egg",
+        "components": {
+            "item_name": "'Ghastling Spawn Egg'",
+            "item_model": "happy:ghastling_spawn_egg",
+            "entity_data": {
+                "id": "minecraft:marker",
+                "Tags": ["HGSpawnEgg","HGGhastlingSpawn"]
+            }
+        }
+    }
+}

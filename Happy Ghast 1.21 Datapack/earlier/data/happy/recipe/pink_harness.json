@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "group": "harness",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:pink_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "'Pink Harness'",
+            "item_model": "happy:pink_harness_item",
+            "custom_data": {"HGGhastHarness":"pink"},
+            "!consumable": {},
+            "!max_stack_size": {}
+        }
+    }
+}

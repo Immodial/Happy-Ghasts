@@ -1,0 +1,24 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "group": "harness",
+    "pattern": [
+        "LLL",
+        "GWG"
+    ],
+    "key": {
+        "L": "minecraft:leather",
+        "G": "minecraft:glass",
+        "W": "minecraft:cyan_wool"
+    },
+    "result": {
+        "id": "minecraft:poisonous_potato",
+        "components": {
+            "item_name": "'Cyan Harness'",
+            "item_model": "happy:cyan_harness_item",
+            "custom_data": {"HGGhastHarness":"cyan"},
+            "!consumable": {},
+            "!max_stack_size": {}
+        }
+    }
+}
