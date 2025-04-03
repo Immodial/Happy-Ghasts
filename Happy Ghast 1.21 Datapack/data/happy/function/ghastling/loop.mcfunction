@@ -9,16 +9,14 @@ execute unless block ~ ~-1 ~ air if score _Velocity HGGlobals matches ..-1 run d
 data modify entity @s[nbt={OnGround:1b}] Motion[1] set value 0.2d
 scoreboard players reset _Velocity HGGlobals
 # Play sounds
-execute if predicate {condition:"random_chance",chance:0.01} run tag @s add HGNoiseMaking
-execute if entity @s[tag=HGNoiseMaking] run playsound entity.ghast.ambient neutral @a ~ ~ ~ 1.2 1.4
-execute if entity @s[tag=HGNoiseMaking] run playsound entity.allay.ambient_with_item neutral @a ~ ~ ~ 1.2 0.8
+execute if predicate {condition:"random_chance",chance:0.008} run tag @s add HGNoiseMaking
+execute if entity @s[tag=HGNoiseMaking] run playsound happy:entity.ghastling.ambient neutral @a ~ ~ ~ 1.2 1
 tag @s remove HGNoiseMaking
 execute if data entity @s {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise1
 execute if data entity @s[tag=!HGNoise1] {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise2
 execute if data entity @s[tag=HGNoise1] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.3
 execute if data entity @s[tag=HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.6
 execute if data entity @s[tag=!HGNoise1,tag=!HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.8
-execute if data entity @s {HurtTime:10s} run playsound entity.allay.hurt neutral @a ~ ~ ~ 1.2 0.6
 tag @s remove HGNoise1
 tag @s remove HGNoise2
 # Eat snowballs

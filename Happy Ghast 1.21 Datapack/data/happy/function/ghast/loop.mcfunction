@@ -11,18 +11,9 @@ data modify entity @s[nbt={OnGround:1b}] Motion[1] set value 0.3d
 scoreboard players reset _Velocity HGGlobals
 # Play sounds
 execute if predicate {condition:"random_chance",chance:0.01} run tag @s add HGNoiseMaking
-execute if entity @s[tag=HGNoiseMaking] run playsound entity.ghast.ambient neutral @a ~ ~ ~ 1.2 1.2
-execute if entity @s[tag=HGNoiseMaking] run playsound entity.allay.item_given neutral @a ~ ~ ~ 1.2 0.6
-execute if entity @s[tag=HGNoiseMaking] run playsound entity.allay.item_taken neutral @a ~ ~ ~ 1.2 0.9
+execute if entity @s[tag=HGNoiseMaking] run playsound happy:entity.happy_ghast.ambient neutral @a ~ ~ ~ 1.2 1
 tag @s remove HGNoiseMaking
-execute if data entity @s {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise1
-execute if data entity @s[tag=!HGNoise1] {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise2
-execute if data entity @s[tag=HGNoise1] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 0.9
-execute if data entity @s[tag=HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1
-execute if data entity @s[tag=!HGNoise1,tag=!HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.2
-execute if data entity @s {HurtTime:10s} run playsound entity.allay.hurt neutral @a ~ ~ ~ 1.2 0.6
-tag @s remove HGNoise1
-tag @s remove HGNoise2
+execute if data entity @s {HurtTime:10s} run playsound happy:entity.happy_ghast.hurt neutral @a ~ ~ ~ 1.2 1
 # Update orientation
 execute on passengers run rotate @s[tag=HGHappyGhastDisplay] ~ 0
 # Remove excess parrot data
@@ -62,6 +53,7 @@ execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatLeft] if functio
 execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatRight] if function happy:ghast/hasthisattachment run tag @s add HGRightPassengerSeat
 execute if entity @s[tag=HGHarnessed] as @e[tag=HGHappyGhastSeatBack] if function happy:ghast/hasthisattachment run tag @s add HGBackPassengerSeat
 execute as @e[tag=HGHappyGhastSeat] on passengers run tag @s[type=player] add HGRider
+tag @a[tag=HGRider] add HGRiding
 execute as @n[tag=HGDriverSeat] on passengers run tag @s[type=player] add HGDriver
 execute if entity @a[tag=HGDriver] run return run function happy:ghast/riding
 execute rotated ~ 0 run function happy:ghast/reseat

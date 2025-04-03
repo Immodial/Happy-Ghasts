@@ -1,0 +1,17 @@
+{
+    "entity.happy_ghast.ambient": {"subtitle": "subtitles.entity.happy_ghast.ambient", "sounds": [
+        {"name":"happy:happy_ghast/ambient1", "weight": 12},
+        {"name":"happy:happy_ghast/ambient2", "weight": 12},
+        {"name":"happy:happy_ghast/ambient3", "weight": 7},
+        {"name":"happy:happy_ghast/ambient4", "weight": 8}
+    ]},
+    "entity.happy_ghast.hurt": {"subtitle": "subtitles.entity.happy_ghast.hurt", "sounds": [
+        "happy:happy_ghast/hurt"
+    ]},
+    "entity.happy_ghast.ride": {"subtitle": "subtitles.entity.happy_ghast.ride", "sounds": [
+        "happy:happy_ghast/ride"
+    ]},
+    "entity.ghastling.ambient": {"subtitle": "subtitles.entity.ghastling.ambient", "sounds": [
+        "happy:ghastling/ambient"
+    ]}
+}
