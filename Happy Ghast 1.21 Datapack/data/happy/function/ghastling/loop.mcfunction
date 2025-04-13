@@ -9,22 +9,12 @@ execute unless block ~ ~-1 ~ air if score _Velocity HGGlobals matches ..-1 run d
 data modify entity @s[nbt={OnGround:1b}] Motion[1] set value 0.2d
 scoreboard players reset _Velocity HGGlobals
 # Play sounds
-execute if predicate {condition:"random_chance",chance:0.008} run tag @s add HGNoiseMaking
-execute if entity @s[tag=HGNoiseMaking] run playsound happy:entity.ghastling.ambient neutral @a ~ ~ ~ 1.2 1
-tag @s remove HGNoiseMaking
-execute if data entity @s {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise1
-execute if data entity @s[tag=!HGNoise1] {HurtTime:10s} if predicate {condition:"random_chance",chance:0.3} run tag @s add HGNoise2
-execute if data entity @s[tag=HGNoise1] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.3
-execute if data entity @s[tag=HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.6
-execute if data entity @s[tag=!HGNoise1,tag=!HGNoise2] {HurtTime:10s} run playsound entity.ghast.scream neutral @a ~ ~ ~ 1.2 1.8
-tag @s remove HGNoise1
-tag @s remove HGNoise2
+execute if predicate {condition:"random_chance",chance:0.008} run playsound happy:entity.ghastling.ambient neutral @a ~ ~ ~ 1 1
+execute if data entity @s {HurtTime:10s} run playsound happy:entity.ghastling.hurt neutral @a ~ ~ ~ 1 1
 # Eat snowballs
 execute rotated ~ 0 positioned ^ ^1 ^1 run tag @e[type=snowball,distance=..1.5] add HGEaten
 execute rotated ~ 0 positioned ^ ^1 ^1.5 run tag @e[type=snowball,distance=..1.5] add HGEaten
 execute rotated ~ 0 positioned ^ ^1 ^2 run tag @e[type=snowball,distance=..1.5] add HGEaten
-execute if entity @e[type=snowball,tag=HGEaten] run playsound entity.parrot.eat neutral @a ~ ~ ~ 1.2 0.4
-execute if entity @e[type=snowball,tag=HGEaten] run playsound entity.allay.item_thrown neutral @a ~ ~ ~ 1.2 1.4
 execute if entity @e[type=snowball,tag=HGEaten] run particle snowflake ^ ^0.5 ^1 0.1 0.1 0.1 0 3
 execute at @e[type=snowball,tag=HGEaten] run scoreboard players operation @s HGGrowthTime *= %GrowthNumerator HGGlobals
 execute at @e[type=snowball,tag=HGEaten] run scoreboard players operation @s HGGrowthTime /= %GrowthDivisor HGGlobals

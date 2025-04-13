@@ -4,9 +4,7 @@
 ## >> Does: Equip ghast with 
 ## >> Input: None
 execute on target unless data entity @s SelectedItem.components."minecraft:custom_data".HGGhastHarness run return fail
-playsound entity.leash_knot.place player @a ~ ~ ~ 2 0.4
-playsound entity.strider.saddle player @a ~ ~ ~ 2 0.8
-playsound block.chain.hit player @a ~ ~ ~ 2 0.6
+playsound happy:entity.happy_ghast.equip player @a ~ ~ ~ 2 1
 execute on vehicle run tag @s add HGHarnessed
 execute on target run tag @s add HGHarnessing
 execute on vehicle if items entity @n[tag=HGHarnessing] weapon.mainhand *[custom_data~{HGGhastHarness:"red"}] run tag @s add HGHarnessedRed

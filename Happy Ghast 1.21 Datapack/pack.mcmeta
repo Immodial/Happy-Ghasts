@@ -12,6 +12,13 @@
           "max_inclusive": 61,
           "min_inclusive": 0
         }
+      },
+      {
+        "directory": "later",
+        "formats": {
+          "max_inclusive": 1000,
+          "min_inclusive": 72
+        }
       }
     ]
   }

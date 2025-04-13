@@ -20,6 +20,7 @@ execute as @e[type=item_display,tag=HGFloorGhasticle] run function happy:dried/g
 # Ghastlings
 execute as @e[type=parrot,tag=HGGhastling] at @s run function happy:ghastling/loop
 execute as @e[type=!player,tag=HGGhastlingDisplay] unless function happy:ghastling/exists run kill @s
+execute as @e[type=!player,tag=HGGhastlingDisplay] on vehicle if data entity @s {DeathTime:2s} at @s run playsound happy:entity.ghastling.death neutral @a ~ ~ ~ 1.2 1
 # Happy ghasts
 execute as @e[type=parrot,tag=HGHappyGhast] at @s if loaded ~ ~ ~ run function happy:ghast/loop
 execute as @e[type=!player,tag=HGHappyGhastDisplay] unless function happy:ghast/exists run kill @s

@@ -10,9 +10,7 @@ execute unless block ~ ~-2 ~ air if score _Velocity HGGlobals matches ..-1 run d
 data modify entity @s[nbt={OnGround:1b}] Motion[1] set value 0.3d
 scoreboard players reset _Velocity HGGlobals
 # Play sounds
-execute if predicate {condition:"random_chance",chance:0.01} run tag @s add HGNoiseMaking
-execute if entity @s[tag=HGNoiseMaking] run playsound happy:entity.happy_ghast.ambient neutral @a ~ ~ ~ 1.2 1
-tag @s remove HGNoiseMaking
+execute if predicate {condition:"random_chance",chance:0.01} run playsound happy:entity.happy_ghast.ambient neutral @a ~ ~ ~ 1.2 1
 execute if data entity @s {HurtTime:10s} run playsound happy:entity.happy_ghast.hurt neutral @a ~ ~ ~ 1.2 1
 # Update orientation
 execute on passengers run rotate @s[tag=HGHappyGhastDisplay] ~ 0
