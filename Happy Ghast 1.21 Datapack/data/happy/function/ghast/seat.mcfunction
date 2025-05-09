@@ -5,13 +5,14 @@
 ## >> Input: None
 execute unless loaded ~ ~ ~ run kill @s
 execute at @s run function happy:ghast/parts/seatinteraction
-execute store result score @s HGUUIDFirst run data get entity @s data.HappyGhastAttached[0]
-execute store result score @s HGUUIDSecond run data get entity @s data.HappyGhastAttached[1]
-execute store result score @s HGUUIDThird run data get entity @s data.HappyGhastAttached[2]
-execute store result score @s HGUUIDFourth run data get entity @s data.HappyGhastAttached[3]
-execute unless function happy:ghast/hasattachment run return run kill @s
+summon snowball ~ -1000 ~ {Tags:["HGHappyGhastFinder"]}
+data modify entity @n[type=snowball,tag=HGHappyGhastFinder] Owner set from entity @s data.HappyGhastAttached
+execute unless function happy:ghast/hasattachment run tag @s add HGDeleting
+kill @e[type=snowball,tag=HGHappyGhastFinder]
+execute if entity @s[tag=HGDeleting] run return run kill @s
+tag @s add HGSeatMounting
 execute on passengers unless entity @s[type=player] on vehicle on passengers if entity @s[tag=HGSeatInteraction] on target run ride @s dismount
-execute on passengers unless entity @s[type=player] on vehicle on passengers if entity @s[tag=HGSeatInteraction] on target run ride @s mount @n[tag=HGAttachmentChecking]
+execute on passengers unless entity @s[type=player] on vehicle on passengers if entity @s[tag=HGSeatInteraction] on target run ride @s mount @n[tag=HGSeatMounting]
 execute on passengers unless entity @s[type=player] on vehicle on passengers if entity @s[tag=HGSeatInteraction] on target at @s run playsound happy:entity.happy_ghast.ride player @a ~ ~ ~ 0.7 1
-tag @s remove HGAttachmentChecking
+tag @s remove HGSeatMounting
 execute on passengers run data remove entity @s[tag=HGSeatInteraction] interaction

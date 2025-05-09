@@ -8,10 +8,6 @@ scoreboard objectives add HGGlobals dummy "Global Variables"
 scoreboard objectives add HGGrowthTime dummy "Time until Growth"
 scoreboard objectives add HGGhasticleTime dummy "Ghasticle Swinging"
 scoreboard objectives add HGLastRotation dummy "Last Rotation"
-scoreboard objectives add HGUUIDFirst dummy "First UUID Value"
-scoreboard objectives add HGUUIDSecond dummy "Second UUID Value"
-scoreboard objectives add HGUUIDThird dummy "Third UUID Value"
-scoreboard objectives add HGUUIDFourth dummy "Fourth UUID Value"
 # Static Variables
 scoreboard players set %GrowthNumerator HGGlobals 9
 scoreboard players set %GrowthDivisor HGGlobals 10

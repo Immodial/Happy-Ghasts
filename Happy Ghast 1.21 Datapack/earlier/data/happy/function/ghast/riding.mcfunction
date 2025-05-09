@@ -4,7 +4,6 @@
 ## >> Does: Manipulate motion/ai
 ## >> Input: None
 tag @s add HGRidden
-tag @a remove HGRider
 data modify entity @s NoAI set value false
 execute on passengers run data modify entity @s[tag=HGHappyGhastHitbox] Health set from entity @n[tag=HGRidden] Health
 execute on passengers run data merge entity @s[tag=HGHappyGhastGoggles] {transformation:{left_rotation:[0d,0d,0d,1d]},start_interpolation:0,interpolation_duration:2}

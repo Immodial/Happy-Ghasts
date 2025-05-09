@@ -26,7 +26,8 @@ execute as @e[type=!player,tag=HGHappyGhastDisplay] unless function happy:ghast/
 execute as @e[type=item_display,tag=HGGhasticle] run function happy:ghast/ghasticle
 execute as @e[type=item_display,tag=HGHappyGhastSeat] run function happy:ghast/seat
 execute as @e[type=interaction,tag=HGSeatInteraction] unless function happy:ghast/seatexists run kill @s
-# Fix falling off ghasts that happens in 1.21.4
+execute as @e[type=marker,tag=HGHappyGhastSeatData] unless function happy:ghast/seatexists run kill @s
+# Fix falling off ghasts
 execute as @a[tag=!HGRiding,tag=HGWasRiding] at @s run tp @s ~ ~1.2 ~
 tag @a remove HGWasRiding
 tag @a[tag=HGRiding] add HGWasRiding
