@@ -5,7 +5,7 @@
     "result": {
         "id": "minecraft:ghast_spawn_egg",
         "components": {
-            "item_name": "'Ghastling Spawn Egg'",
+            "item_name": "{translate:'item.happy.ghastling_spawn_egg'}",
             "item_model": "happy:ghastling_spawn_egg",
             "entity_data": {
                 "id": "minecraft:marker",
