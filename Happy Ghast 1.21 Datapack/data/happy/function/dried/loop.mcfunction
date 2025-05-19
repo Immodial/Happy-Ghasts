@@ -10,6 +10,7 @@ execute if entity @s[tag=HGNoiseMaking] if block ~ ~ ~ water run playsound happy
 execute if entity @s[tag=HGNoiseMaking] if block ~ ~ ~ water run particle bubble_column_up ^ ^ ^0.5 0.2 0.2 0.2 0 10
 tag @s remove HGNoiseMaking
 execute if data entity @s {HurtTime:10s} run playsound happy:entity.dried_ghast.hurt neutral @a ~ ~ ~ 0.8 1
+execute if data entity @s {HurtTime:10s} on attacker if entity @s[type=player,advancements={happy:hurt_dried=false}] run function happy:dried/warn
 # Update orientation
 execute on passengers run rotate @s[tag=HGDriedGhastDisplay] ~ 0
 # Remove excess cow data

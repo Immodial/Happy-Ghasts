@@ -14,7 +14,7 @@
     "result": {
         "id": "minecraft:poisonous_potato",
         "components": {
-            "item_name": "Green Harness",
+            "item_name": {"translate":"item.happy.green_harness"},
             "item_model": "happy:green_harness_item",
             "custom_data": {"HGGhastHarness":"green"},
             "!consumable": {},

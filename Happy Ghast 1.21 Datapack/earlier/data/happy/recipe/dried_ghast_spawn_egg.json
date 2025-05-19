@@ -13,7 +13,7 @@
     "result": {
         "id": "minecraft:ghast_spawn_egg",
         "components": {
-            "item_name": "'Dried Ghast Spawn Egg'",
+            "item_name": "{translate:'item.happy.dried_ghast_spawn_egg'}",
             "item_model": "happy:dried_ghast_spawn_egg",
             "entity_data": {
                 "id": "minecraft:marker",

@@ -1,0 +1,6 @@
+{
+    "criteria": {
+        "none": {"trigger": "impossible"}
+    },
+    "requirements": [["none"]]
+}
