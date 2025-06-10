@@ -7,6 +7,6 @@ summon snowball ~ -1000 ~ {Tags:["HGHappyGhastFinder"]}
 data modify entity @n[type=snowball,tag=HGHappyGhastFinder] Owner set from entity @s data.HappyGhastAttached
 execute as @n[type=snowball,tag=HGHappyGhastFinder] on origin run tag @s add HGHappyGhastFound
 kill @e[type=snowball,tag=HGHappyGhastFinder]
-execute if entity @e[type=parrot,tag=HGHappyGhastSeated,tag=HGHappyGhastFound] run return 1
+execute as @e[type=parrot,tag=HGHappyGhastSeated,tag=HGHappyGhastFound] run return run tag @s remove HGHappyGhastFound
 tag @e remove HGHappyGhastFound
 return fail

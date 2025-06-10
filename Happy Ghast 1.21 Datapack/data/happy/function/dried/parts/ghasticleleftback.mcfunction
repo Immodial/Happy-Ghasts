@@ -10,4 +10,5 @@ data modify entity @n[tag=HGDriedGhastFormatting] transformation.translation set
 data modify entity @n[tag=HGDriedGhastFormatting] transformation.scale set value [1.2d,1.2d,1.2d]
 data modify entity @n[tag=HGDriedGhastFormatting] transformation.right_rotation set value [0f,0.25f,0f,0.97f]
 scoreboard players add @n[tag=HGDriedGhastFormatting] HGGhasticleTime 6
+scoreboard players set @n[tag=HGDriedGhastFormatting] HGGhasticleStartup 20
 tag @e remove HGDriedGhastFormatting

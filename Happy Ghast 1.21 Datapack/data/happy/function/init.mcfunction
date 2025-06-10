@@ -7,6 +7,7 @@
 scoreboard objectives add HGGlobals dummy "Global Variables"
 scoreboard objectives add HGGrowthTime dummy "Time until Growth"
 scoreboard objectives add HGGhasticleTime dummy "Ghasticle Swinging"
+scoreboard objectives add HGGhasticleStartup dummy "Ghasticle Animation Startup"
 scoreboard objectives add HGLastRotation dummy "Last Rotation"
 # Static Variables
 scoreboard players set %GrowthNumerator HGGlobals 9

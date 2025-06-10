@@ -9,4 +9,5 @@ ride @n[tag=HGDriedGhastFormatting] mount @s
 data modify entity @n[tag=HGDriedGhastFormatting] transformation.translation set value [-0.3d,-0.098d,0.2d]
 data modify entity @n[tag=HGDriedGhastFormatting] transformation.scale set value [1.2d,1.2d,1.2d]
 scoreboard players add @n[tag=HGDriedGhastFormatting] HGGhasticleTime 6
+scoreboard players set @n[tag=HGDriedGhastFormatting] HGGhasticleStartup 20
 tag @e remove HGDriedGhastFormatting
